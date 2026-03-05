@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JoJo Hub Key</title>
+</head>
+<body>
+<h1>Here is your key:</h1>
+<p id="key"></p>
+<button onclick="generateKey()">Generate Key</button>
+<script>
+function generateKey() {
+  let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let key = "";
+  for (let i = 0; i < 12; i++) {
+    key += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  document.getElementById("key").innerText = key;
+}
+</script>
+</body>
+</html>
